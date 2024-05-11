@@ -15,14 +15,27 @@ import {
 import app from "../../firebase.config";
 import firebase from 'firebase/compat/app';
 
+// interface AuthData {
+  
+// }
+
+
 export const AuthContext = createContext<{
+    // user: firebase.User | null;
+    // loading: boolean;
+    // setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+    // createUser: (email: string, password: string) => Promise<firebase.auth.UserCredential>;
+    // signIn: (email: string, password: string) => Promise<firebase.auth.UserCredential>;
+    // SignInWithGoogle: () => Promise<firebase.auth.UserCredential>;
+    // logOut: () => Promise<void>;
     user: firebase.User | null;
-    loading: boolean;
-    setLoading: React.Dispatch<React.SetStateAction<boolean>>;
-    createUser: (email: string, password: string) => Promise<firebase.auth.UserCredential>;
-    signIn: (email: string, password: string) => Promise<firebase.auth.UserCredential>;
-    SignInWithGoogle: () => Promise<firebase.auth.UserCredential>;
-    logOut: () => Promise<void>;
+  loading: boolean;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  createUser: (email: string, password: string) => Promise<UserCredential>;
+  signIn: (email: string, password: string) => Promise<UserCredential>;
+  signInWithGoogle: () => Promise<any>; // Adjust the type accordingly
+  resetPassword: (email: string) => Promise<any>; // Adjust the type accordingly
+  logOut: () => Promise<any>; // Adjust the type accordingly
 }>
 ({
     user: null,

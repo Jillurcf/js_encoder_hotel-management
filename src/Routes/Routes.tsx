@@ -4,6 +4,8 @@ import Main from '../Layouts/Main'
 import Home from '../Page/Home/Home';
 import ErrorPage from '../Page/ErrorPage';
 import AboutUs from '../Page/AboutUs/AboutUs';
+import SignIn from '../Page/Login/Login';
+import Signup from '../Page/Signup/Signup';
 
 
 
@@ -24,5 +26,13 @@ export const router = createBrowserRouter([
       
     ],
   },
+  {
+    path: "/signin",
+    element: <SignIn></SignIn>
+  },
+  {
+    path: "/signup",
+    element: <Signup></Signup>
+  }
 
 ])

@@ -1,7 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import UseAuth from '../../../Hooks/UseAuth';
+
+
 
 const NavBar: React.FC<any> = () => {
+  const {user, logOut} = UseAuth()
     const navItems= <>
     <li>
     <NavLink
@@ -53,7 +57,11 @@ const NavBar: React.FC<any> = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn btn-outline text-white">Login</a>
+    {
+      user ? <button onClick={logOut} className="btn btn-outline text-white"><Link to="/signin">Logout</Link></button> : <button className="btn btn-outline text-white"><Link to="/signin">Login</Link></button>
+      
+    }
+   
   </div>
 </div>
         </div>
