@@ -3,16 +3,25 @@ import { formatDistance } from "date-fns";
 import { useState } from "react";
 import Button from "../../Component/Button/Button";
 import Calendars from "./Calender";
-import BookingModal from "../../Component/Button/BookingsModal";
 import UseAuth from "../../Hooks/UseAuth";
+
 
 
 const RoomReservation: React.FC<any> = ({ room }) => {
  const {user} = UseAuth();
-  let [isOpen, setIsOpen] = useState(false);
-  const closeModal = () => {
-    setIsOpen(false);
-  };
+  // let [isOpen, setIsOpen] = useState(false);
+  // const closeModal = () => {
+  //   setIsOpen(false);
+  // };
+const [bookings, setBookings] = useState(
+  JSON.parse(localStorage.getItem("room"))
+)
+console.log(bookings);
+  const handleReservation = () => {
+    localStorage.setItem("room", JSON.stringify([...bookings, {
+    room
+    }]))
+  }
 
   // Price calcualtion
   // Tootal days * Price
@@ -58,7 +67,8 @@ console.log(value);
       <div className="p-4">
         <Button
           disabled={room.host.email === user?.email || room.booked}
-          onClick={() => setIsOpen(true)}
+          // onClick={() => setIsOpen(true)}
+          onClick={handleReservation}
           label="Reservation"
         ></Button>
       </div>
@@ -67,11 +77,11 @@ console.log(value);
         <div>Total</div>
         <div>$ {totalPrice}</div>
       </div>
-      <BookingModal
+      {/* <BookingModal
         closeModal={closeModal}
         isOpen={isOpen}
         bookingInfo={bookingInfo}
-      ></BookingModal>
+      ></BookingModal> */}
     </div>
   );
 };

@@ -7,6 +7,7 @@ import AboutUs from '../Page/AboutUs/AboutUs';
 import SignIn from '../Page/Login/Login';
 import Signup from '../Page/Signup/Signup';
 import RoomDetails from '../Page/RoomDetails/RoomDetails';
+import BookedRoom from '../Page/BookedRoom/BookedRoom';
 
 
 
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
         path: '/roomDetails/:id',
         element: <RoomDetails></RoomDetails>
       },
+      {
+        path: '/bookedRoom',
+        element: <BookedRoom></BookedRoom>
+      }
       
     ],
   },

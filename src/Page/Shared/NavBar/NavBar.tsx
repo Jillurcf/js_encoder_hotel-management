@@ -35,6 +35,20 @@ const NavBar: React.FC<any> = () => {
           About us
         </NavLink>
     </li>
+    <li>
+    <NavLink
+          to="/bookedRoom"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "bg-pink-200 text-pink-400 font-bold"
+              : "text-white font-bold"
+          }
+        >
+          Booked Room
+        </NavLink>
+    </li>
     </>
     return (
      <div className='bg-pink-400 text-white'>
