@@ -1,4 +1,6 @@
 import React from 'react';
+import Category from '../../Component/Rooms/Category';
+import Rooms from '../../Component/Rooms/Rooms';
 
 // Define the props interface
 
@@ -6,9 +8,9 @@ import React from 'react';
 // Define the functional component
 const Home: React.FC<any> = () => {
   return (
-    <div className='min-h-screen'>
-      <h1>This is a home page</h1>
-      {/* <p>Initial value: {initialValue}</p> */}
+    <div className='min-h-screen max-w-screen-xl mx-auto'>
+     <Category></Category>
+     <Rooms></Rooms>
     </div>
   );
 };
