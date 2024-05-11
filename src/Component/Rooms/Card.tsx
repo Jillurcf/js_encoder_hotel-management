@@ -9,9 +9,10 @@ interface Room {
     category: string; // Ensure that 'category' property is defined in Room interface
 }
 
-const Card: React.FC<Room> = ({ room, Room }) => {
+const Card: React.FC<Room> = ({ room}) => {
+    console.log(room.category);
   return (
-    <Link to={`/room/${room?._id}`} className="col-span-1 cursor-pointer group">
+    <Link to={`/roomDetails/${room?._id}`} className="col-span-1 cursor-pointer group">
       <div className="flex flex-col gap-2 w-full">
         <div
           className="

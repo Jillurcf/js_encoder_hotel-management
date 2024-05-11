@@ -6,6 +6,7 @@ import ErrorPage from '../Page/ErrorPage';
 import AboutUs from '../Page/AboutUs/AboutUs';
 import SignIn from '../Page/Login/Login';
 import Signup from '../Page/Signup/Signup';
+import RoomDetails from '../Page/RoomDetails/RoomDetails';
 
 
 
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: '/aboutus',
         element: <AboutUs></AboutUs>
+      },
+      {
+        path: '/roomDetails/:id',
+        element: <RoomDetails></RoomDetails>
       },
       
     ],
