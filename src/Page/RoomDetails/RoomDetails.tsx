@@ -33,7 +33,8 @@ const RoomDetails: React.FC<{ roomId: string }> = () => {
     }, [roomId]);
    
     return (
-        <div className="max-w-screen-lg mx-auto">
+        <div className="max-w-screen-lg mx-auto py-12">
+           
             <div className="flex flex-col gap-6">
                 {room && <Header room={room} />}
             </div>

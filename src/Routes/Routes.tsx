@@ -8,6 +8,7 @@ import SignIn from '../Page/Login/Login';
 import Signup from '../Page/Signup/Signup';
 import RoomDetails from '../Page/RoomDetails/RoomDetails';
 import BookedRoom from '../Page/BookedRoom/BookedRoom';
+import PrivateRoute from './PrivateRoute';
 
 
 
@@ -27,7 +28,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/roomDetails/:id',
-        element: <RoomDetails></RoomDetails>
+        element: <PrivateRoute><RoomDetails></RoomDetails></PrivateRoute>
       },
       {
         path: '/bookedRoom',

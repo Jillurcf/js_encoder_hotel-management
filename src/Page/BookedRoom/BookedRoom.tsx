@@ -8,7 +8,7 @@ const BookedRoom: React.FC<any> = () => {
   console.log(bookedRoomParse);
 
   return (
-    <div className="grid grid-cols-4 gap-4 p-12 min-h-screen max-w-screen-xl mx-auto">
+    <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-4 p-12 min-h-screen max-w-screen-xl mx-auto">
       {bookedRoomParse.map((booked) => (
         <div key={booked.room._id}>
           <div className="flex flex-col gap-2 w-full">

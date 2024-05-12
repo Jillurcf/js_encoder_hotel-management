@@ -4,15 +4,13 @@ import { useState } from "react";
 import Button from "../../Component/Button/Button";
 import Calendars from "./Calender";
 import UseAuth from "../../Hooks/UseAuth";
+import Swal from "sweetalert2";
 
 
 
 const RoomReservation: React.FC<any> = ({ room }) => {
  const {user} = UseAuth();
-  // let [isOpen, setIsOpen] = useState(false);
-  // const closeModal = () => {
-  //   setIsOpen(false);
-  // };
+ 
 const [bookings, setBookings] = useState(
   JSON.parse(localStorage.getItem("room"))
 )
@@ -21,6 +19,7 @@ console.log(bookings);
     localStorage.setItem("room", JSON.stringify([...bookings, {
     room
     }]))
+    Swal.fire("Room Booking Success");
   }
 
   // Price calcualtion
@@ -67,7 +66,7 @@ console.log(value);
       <div className="p-4">
         <Button
           disabled={room.host.email === user?.email || room.booked}
-          // onClick={() => setIsOpen(true)}
+    
           onClick={handleReservation}
           label="Reservation"
         ></Button>
@@ -77,11 +76,7 @@ console.log(value);
         <div>Total</div>
         <div>$ {totalPrice}</div>
       </div>
-      {/* <BookingModal
-        closeModal={closeModal}
-        isOpen={isOpen}
-        bookingInfo={bookingInfo}
-      ></BookingModal> */}
+      
     </div>
   );
 };

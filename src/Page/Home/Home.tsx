@@ -9,8 +9,8 @@ import RoomDetails from '../RoomDetails/RoomDetails';
 // Define the functional component
 const Home: React.FC<any> = () => {
   return (
-    <div className='min-h-screen max-w-screen-xl mx-auto'>
-      <RoomDetails></RoomDetails>
+    <div className='md:min-h-screen md:max-w-screen-xl md:mx-auto px-4 md:px-4 lg:px-0'>
+      {/* <RoomDetails></RoomDetails> */}
      <Category></Category>
      <Rooms></Rooms>
     </div>

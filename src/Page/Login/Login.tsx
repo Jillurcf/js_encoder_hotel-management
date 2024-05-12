@@ -74,11 +74,11 @@ const SignIn: React.FC<any> = () => {
   };
 
   return (
-    <div className="h-screen items-center flex">
+    <div className="lg:h-screen items-center lg:flex md:mt-24">
       <div className="hero items-center">
-        <div className="flex justify-between">
+        <div className="md:flex justify-between">
           <div
-            className="hero w-4/6"
+            className="hero w-96"
             style={{
               backgroundImage: 'url(https://i.ibb.co/XyWpP16/signin-Img.jpg)',
             }}
@@ -135,11 +135,11 @@ const SignIn: React.FC<any> = () => {
               </div>
 
               <div className="form-control mt-6">
-                <p
+                {/* <p
                   onClick={handleGoogleSignIn}
                   className="mb-4 underline cursor-pointer"
                 >
-                  Sign In with{' '}
+                  Sign In with
                   <span className="text-yellow-600">Google</span>{' '}
                   <span>
                     {' '}
@@ -150,7 +150,7 @@ const SignIn: React.FC<any> = () => {
                       <FcGoogle className="-ml-2" />
                     </Link>
                   </span>
-                </p>
+                </p> */}
                 <button className="text-white font-bold btn bg-pink-400">
                   Sign In
                 </button>

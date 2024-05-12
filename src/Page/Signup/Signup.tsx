@@ -36,7 +36,7 @@ console.log(userInfo);
 
     if (!/[A-Z]/.test(password)) {
       return new Swal(
-        "Password should have one capital letter and one special character"
+        "Password should have one capital letter, one number and one special character"
       );
     } else if (!/[!@#$%^&*]/.test(password)) {
       return new Swal(
@@ -96,37 +96,39 @@ console.log(userInfo);
   };
 
   return (
-    <div className="hero min-h-screen max-w-screen-xl mx-auto">
-     
-      <div className="hero-content  text-blue-950">
-        <div className="flex">
-          {/* register image part start */}
+    <div className="lg:h-screen items-center lg:flex md:mt-12">
+      <div className="hero items-center">
+        <div className="md:flex justify-between">
           <div
-            className="hero"
+            className="hero w-96"
             style={{
-              backgroundImage: 'url(https://i.ibb.co/yBS2sF6/register-Img.jpg)'
+              backgroundImage: 'url(https://i.ibb.co/XyWpP16/signin-Img.jpg)',
             }}
-
           >
-            
             <div className="hero-overlay bg-opacity-90"></div>
             <div className="hero-content">
               <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold leading-tight text-gray-400">Welcome to <br /> <span className="text-pink-400">Hotel Management</span></h1>
-                <p className="mb-5 text-pink-200">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro doloribus dolor voluptas, tempora vel asperiores modi et quaerat ipsam nobis, autem, magnam similique numquam! Repellat tenetur totam nobis dignissimos consequuntur!
+                <h1 className="mb-5 text-5xl font-bold leading-tight">
+                  Welcome to <br />{' '}
+                  <span className="text-pink-400">Hotel Management</span>
+                </h1>
+                <p className="mb-5 text-pink-300">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ipsam cumque rerum velit ut iusto veritatis nostrum odio animi
+                  minus natus vitae illo sed temporibus dicta eaque maiores
+                  quaerat, aspernatur est?
                 </p>
-               <div className="flex gap-4 text-pink-300 mt-48">
-                <FaFacebook />
-                <FaYoutube />
-                <FaLinkedin />
-                <FaInstagram />
-               </div>
+                <div className="flex gap-4 text-pink-300 mt-24">
+                  <FaFacebook />
+                  <FaYoutube />
+                  <FaLinkedin />
+                  <FaInstagram />
+                </div>
               </div>
             </div>
           </div>
          
-          <div className=" card flex-shrink-0 shadow-2xl">
+          <div className=" card shadow-2xl w-96">
             <form onSubmit={handleRegister} className="card-body">
               <h1 className="text-pink-400 font-bold">Please Register Here</h1>
               <div className="form-control">
