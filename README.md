@@ -1,8 +1,17 @@
-# React + Vite
+# Setup Instructions:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Clone the project repository from the version 
+control system (e.g., Git).
+- Navigate to the project directory in your terminal.
+- Run npm install or yarn install to install the - project dependencies.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Brief Overview of Architecture:
+The hotel booking application is a frontend solution developed using React with TypeScript, UseState for state management, and CSS Modules for styling. It offers users an intuitive interface to browse hotels, view rooms, and book accommodations. The application interacts with a static JSON file as its data source, simulating real-world data fetching scenarios. Users can authenticate through a simulated login functionality and seamlessly navigate through the various views to find and book their desired rooms. With a focus on modern React practices and comprehensive type safety using TypeScript, the application ensures a smooth and reliable user experience.
+
+
+## Live link: 1- https://jsencoder-hotel-management.vercel.a
+
+# userId and pasword for login: 
+userId: tush@push.com
+password: Tush123456&

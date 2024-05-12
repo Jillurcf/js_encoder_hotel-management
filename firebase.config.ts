@@ -11,6 +11,11 @@ const firebaseConfig = {
   storageBucket: "jsencoder-hotel-management.appspot.com",
   messagingSenderId: "200409288295",
   appId: "1:200409288295:web:d2e3e18f1613a174cf0ec2"
+  
+ 
+    
+ 
+  
 };
 
 // Initialize Firebase

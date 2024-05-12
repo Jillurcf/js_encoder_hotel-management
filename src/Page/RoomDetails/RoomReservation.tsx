@@ -11,16 +11,30 @@ import Swal from "sweetalert2";
 const RoomReservation: React.FC<any> = ({ room }) => {
  const {user} = UseAuth();
  
-const [bookings, setBookings] = useState(
-  JSON.parse(localStorage.getItem("room"))
-)
+
+
+// Retrieve bookings from localStorage
+const storedBookings: string | null = localStorage.getItem("room");
+// Parse JSON or initialize with an empty array if null
+const initialBookings = storedBookings ? JSON.parse(storedBookings) : [];
+const [bookings, setBookings] = useState<any[]>(initialBookings); // Adjust any[] according to the type of 'room'
+
 console.log(bookings);
-  const handleReservation = () => {
-    localStorage.setItem("room", JSON.stringify([...bookings, {
-    room
-    }]))
-    Swal.fire("Room Booking Success");
-  }
+
+const handleReservation = () => {
+ 
+  const newBooking = { room };
+
+  // Update 'bookings' state with the new booking
+  setBookings(prevBookings => [...prevBookings, newBooking]);
+
+  // Update localStorage with the new booking
+  localStorage.setItem("room", JSON.stringify([...bookings, newBooking]));
+
+  // Show success message using SweetAlert2
+  Swal.fire("Room Booking Success");
+};
+
 
   // Price calcualtion
   // Tootal days * Price
